@@ -4,9 +4,60 @@
     <link rel='stylesheet' href='css/style.css'>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Document</title>
+    <title>Pomodoro Clock</title>
 </head>
 <body>
+    
+    <div class="container">
+        
+        <h1 class="title" id="countdownTitle">Start a Cycle</h1>
+        <div class="clock-container">
+            <div class="timer" id="countdown">00:00</div>
+            <div class="btnContainer">
+            
+                <div class="flx">
+                    <button class="btn" id="stop" name="stop"></button>
+                    <label for="stop">stop</label for="stop">
+                </div>
+                
+            
+                <div class="flx">
+                    <button name="start" class="btn" id="start"></button>
+                    <label for="start">start</label>
+                </div>
+                         
+                <div class="flx">
+                    <button name="skip" class="btn" id="skip"></button>
+                    <label for="skip">skip</label>
+                </div>            
+                   
+            </div>
+            
+        </div>
+   
+      
+           <span id="break"  >
+               <label for="break" >Break</label >
+               <input type="range"  min="1" max="15" value="5" class="slider" id="breakRange" name="break">
+               <div id="breakRangeValue"></div>
+           </span>
+           <span id="bigBreak">
+               <label for="bigBreak" >Big break</label >
+               <input name="bigBreak" type="range"  min="5" max="60" value="5" class="slider" id="bigBreakRange">
+               <div id="bigBreakRangeValue"></div>
+           </span>
+           <span  id="focus">
+               <label for="focus">Focus</label>
+               <input name="focus" type="range"  min="1" max="60" value="25" class="slider" id="focusRange">
+               <div id="focusRangeValue"></div>
+           </span>
+          
+           <footer class="footer"></footer> 
+    </div>
+               
+
+
     <script src='javascript/main.js'></script>
 </body>
 </html>
+ 
