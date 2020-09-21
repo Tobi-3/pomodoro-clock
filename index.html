@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-    <link rel='stylesheet' href='css/style.css'>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Pomodoro Clock</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pomodoro</title>
+
+	<link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-    
-    <div class="container">
-        
-        <h1 class="title" id="countdownTitle">Start a Cycle</h1>
-        <div class="clock-container">
-            <div class="timer" id="countdown">00:00</div>
-            <div class="btnContainer">
-            
-                <div class="flx">
-                    <button class="btn" id="stop" name="stop"></button>
-                    <label for="stop">stop</label for="stop">
-                </div>
-                
-            
-                <div class="flx">
-                    <button name="start" class="btn" id="start"></button>
-                    <label for="start">start</label>
-                </div>
-                         
-                <div class="flx">
-                    <button name="skip" class="btn" id="skip"></button>
-                    <label for="skip">skip</label>
-                </div>            
-                   
-            </div>
-            
-        </div>
-   
-      
-           <span id="break"  >
-               <label for="break" >Break</label >
-               <input type="range"  min="1" max="15" value="5" class="slider" id="breakRange" name="break">
-               <div id="breakRangeValue"></div>
-           </span>
-           <span id="bigBreak">
-               <label for="bigBreak" >Big break</label >
-               <input name="bigBreak" type="range"  min="5" max="60" value="5" class="slider" id="bigBreakRange">
-               <div id="bigBreakRangeValue"></div>
-           </span>
-           <span  id="focus">
-               <label for="focus">Focus</label>
-               <input name="focus" type="range"  min="1" max="60" value="25" class="slider" id="focusRange">
-               <div id="focusRangeValue"></div>
-           </span>
-          
-           <footer class="footer"></footer> 
-    </div>
-               
 
+<body class="centered">
+	<div class="container centered">
+		<h1 class="title" id="countdownTitle">Start a Cycle</h1>
+		<div class="countdownContainer">
+			<div class="countdownDisplay" id="countdownDisplay">
+				00:00
+			</div>
+			<div>
+				<!-- <div class="btn" id="stop">Stop</div> -->
+				<div class="btn" id="pause_start"></div>
+			</div>
+		</div>
 
-    <script src='javascript/main.js'></script>
+		<form>
+			<span>
+				<label for="focus">Focus</label>
+				<input type="range" id="focusInput" name="focus" min="1" max="60" value="25" class="slider"
+					oninput="focusOutput.value = focusInput.value" />
+				<output id="focusOutput">25</output>
+			</span>
+
+			<span>
+				<label for="longBreak">Long break</label>
+				<input type="range" id="longBreakInput" name="longBreak" min="1" max="60" value="15" class="slider"
+					oninput="longBreakOutput.value = longBreakInput.value" />
+				<output id="longBreakOutput">15</output>
+			</span>
+
+			<span>
+				<label for="break">Break</label>
+				<input type="range" name="break" id="breakInput" min="1" max="15" value="5" class="slider"
+					oninput="breakOutput.value = breakInput.value" />
+				<output id="breakOutput">5</output>
+			</span>
+	</div>
+	</form>
+
+	<footer class="footer">
+		<div>
+			Made by <a href="https://github.com/Tobi-3"> this</a>
+			guy
+			<img src="GitHub-Mark/PNG/GitHub-Mark-Light-32px.png" alt="github logo" />
+		</div>
+	</footer>
+
+	<script src="javascript/main_clean.js"></script>
 </body>
+
 </html>
- 

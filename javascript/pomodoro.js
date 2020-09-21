@@ -32,9 +32,7 @@ const countdown = {
 	countdownTime: sliders.focus.value * 60000, // duration of work cycle in millisecs
 	break: sliders.shortBreak.value * 60000, // duration in millisecs
 	longBreak: sliders.longBreak.value * 60000, // duration in millisecs
-	// countdownTime: 25 * 60000, // duration of work cycle in millisecs
-	// break: 5 * 60000, // duration in millisecs
-	// longBreak: 15 * 60000, // duration in millisecs
+
 	cyclestage: 1, //represents
 	isRunning: false, // currently running?
 };
